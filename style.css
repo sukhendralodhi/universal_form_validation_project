@@ -8,6 +8,11 @@
 }
 .input-container {
     text-align: center;
+    background-color: aquamarine;
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem 0rem;
+    border-radius: 5px;
 }
 .input-container div {
     margin-top: 2rem;
