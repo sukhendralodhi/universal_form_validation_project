@@ -10,47 +10,47 @@
 </head>
 <body>
     <div class="container">
-        <form action="" id="form" name="myform" onsubmit="return validateForm()">
+        <form action="welcome.html">
             <!-- name  -->
             <div class="input-container">
                 <div>
                     <label for="name">Name:
                         <input type="text" name="fname" id="name" placeholder="Enter your name" required autocomplete="off">
-                        <span class="error-msg">Error</span>
+                        <span class="error-msg"></span>
                     </label>
                 </div>
                 <!-- email  -->
                 <div>
                     <label for="email">Email:
                         <input type="email" name="femail" id="email" placeholder="Enter your email" required autocomplete="off">
-                        <span class="error-msg">Error</span>
+                        <span class="error-msg"></span>
                     </label>
                 </div>
                 <!-- mobile  -->
                 <div>
                     <label for="mobile">Mobile:
-                        <input type="text" name="fmobile" id="mobile" placeholder="Enter your mobile" required autocomplete="off">
-                        <span class="error-msg">Error</span>
+                        <input type="text" name="fmobile" id="mobile"  placeholder="Enter your mobile" required autocomplete="off">
+                        <span class="error-msg"></span>
                     </label>
                 </div>
                 <!-- password  -->
                 <div>
                     <label for="pass">Password:
                         <input type="password" name="fpass" id="pass" placeholder="Enter your password" required autocomplete="off">
-                        <span class="error-msg">Error</span>
+                        <span class="error-msg"></span>
                     </label>
                 </div>
                 <!-- confrim password  -->
                 <div>
                     <label for="cpass">Confirm password:
-                        <input type="password" id="fcpass" placeholder="Confirm your password" required autocomplete="off">
-                        <span class="error-msg">Error</span>
+                        <input type="password" name="fcpass" id="cpass" placeholder="Confirm your password" required autocomplete="off">
+                        <span class="error-msg"></span>
                     </label>
                 </div>
 
                 <!-- button  -->
                
-                    <input type="submit" value="Submit" id="btn">
+                    <input type="submit" value="Submit" id="btn" onclick="return validateForm()">
                 
             </div>
         </form>

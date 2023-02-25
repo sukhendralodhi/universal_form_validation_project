@@ -1,36 +1,37 @@
 // getting form elements 
-const formElement = document.getElementById('form');
 
-const errorMsg = ()=> {
-    let errorMessage = document.querySelectorAll('.error-msg');
-    for (let item of errorMessage) {
-        item.innerHTML = '';
-    }
-}
-
-const setError = (id, error)=>{
-    let errorId = document.getElementById(id);
-    let element = document.getElementsByClassName('error-msg')[0].innerText = `*${error-message}`;
-}
 
 const validateForm = () =>{
-    let returnValue = true;
-    // calling function for clear value of errors 
-    errorMsg();
-    // getting all form inputs and values 
-    let name = document.forms['myform']['fname'].value;
-    let email = document.forms['myform']['femail'].value;
-    let mobile = document.forms['myform']['fmobile'].value;
-    let password = document.forms['myform']['fpass'].value;
-    let cpassword = document.forms['myform']['fcpass'].value;
+    let nameEle = document.getElementById('name').value;
+    let emailEle = document.getElementById('email').value;
+    let mobileEle = document.getElementById('mobile').value;
+    let passEle = document.getElementById('pass').value;
+    let cPassEle = document.getElementById('cpass').value;
 
-    // form validation 
-    if(name.length < 5) {
-        setError('name','Length of name is to short')
-        returnValue = false;
+    if(nameEle.length < 5) {
+        alert('Name is to short');
+        return false;
+    }
+   
+
+    if(emailEle.length < 5) {
+        alert('Please enter valid email');
+        return false;
     }
 
+    if(mobileEle.length != 10) {
+        alert('Please enter valid mobile number');
+        return false;
+    }
+    if(passEle.length < 6) {
+        alert('Please enter valid password');
+        return false;
+    }
+    if(cPassEle != passEle) {
+        alert('Does not match');
+        return false;
+    }
+
+    return true;
+
 } 
-formElement.addEventListener('submit', (e)=> {
-    e.preventDefault();
-})
